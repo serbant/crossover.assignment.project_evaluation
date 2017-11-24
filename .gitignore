@@ -10,3 +10,10 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+/target/*.jar
+*.class
+/target/surefire-reports/*.txt
+/target/surefire-reports/*.xml
+/target/robotframework-reports/*.html
+/target/robotframework-reports/*.xml
+/target/robotframework-reports/*.png
