@@ -17,4 +17,4 @@ RUN sudo git show
 EXPOSE 4444
 
 CMD [ "mvn", "--version" ]
-CMD [ "mvn", "clean", "integration-test", "-Dwebdriver.base.url=https://www.crossover.com" ]
+CMD [ "sudo", "mvn", "clean", "integration-test", "-Dwebdriver.base.url=https://www.crossover.com" ]
