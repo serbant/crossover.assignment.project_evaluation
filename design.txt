@@ -1,0 +1,56 @@
+Design considerations
+=====================
+
+Notes anbout the assignment
+---------------------------
+
+There are some errors:
+
+* There is no JOBS link on the home page. One must go via FOR CANDIDATES
+
+* The text search is fuzzy. If one searches for "Chief", the results include
+jobs that contain words similar to "Chief" (like "Owner"). Implementing a
+test for such a search requires that one is informed of what the engine
+considers to be similar to "Chief".
+
+I will note that the testability of the crossover web site leaves something to
+be desired. Most of the web elements do not come with an id property so one
+must jump through some serious hoops.
+
+General implementation
+----------------------
+
+This is ultimately a relatively straight forward maven project implementation.
+The only delicate thing is implementing the acceptance tests using
+the robot framework maven plugin. Additionally, I've included a plugin that
+checks for the latest web driver binaries and downloads them if needed.
+
+Handling the Javascript libraries on the web site
+-------------------------------------------------
+
+As mentioned above, a lot of web elements on www.crossover.com do not have an
+id property.
+I've handled this by embedding Javascript code in the robot test cases. The
+Javascript code identifies such web elements using other properties and
+then assigns them unique id property values.
+
+Resolving the issue of the fuzzy text search
+--------------------------------------------
+
+I've assumed that a minimum of fully matching results would constitute a
+PASS. The threshold is configurable via the ${minMatches} variable in
+src/test/robotframework/settings/Settings.robot file.
+A proper test case will depend on how the search is implemented.
+
+docker notes
+------------
+
+The only remarcable (for me) issue here is the use of xvfb such that headless
+selenium tests can be executed in docker containers.
+
+Personal notes
+--------------
+
+This was a very challenging assignment for me. Maven, Selenium, and the
+Robot framework are all technologies that I had never used before and I would
+like to thank you for the opportunity.

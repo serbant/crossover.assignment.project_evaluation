@@ -17,10 +17,4 @@ buildNumber.properties
 /target/robotframework-reports/*.html
 /target/robotframework-reports/*.xml
 /target/robotframework-reports/*.png
-/webdriver/zips/chromedriver_linux64.zip
-/webdriver/zips/geckodriver-v0.18.0-linux64.tar.gz
-/webdriver/zips/phantomjs-2.1.1-linux-x86_64.tar.bz2
-/webdriver/binaries/linux/phantomjs/64bit/phantomjs
-/webdriver/binaries/linux/marionette/64bit/geckodriver
-/webdriver/binaries/linux/googlechrome/64bit/chromedriver
 *.class
