@@ -48,6 +48,9 @@ docker notes
 The only remarcable (for me) issue here is the use of xvfb such that headless
 selenium tests can be executed in docker containers.
 
+The docker image pulls the sources from GitHub so it must be built on a
+system that has internet access.
+
 Personal notes
 --------------
 
